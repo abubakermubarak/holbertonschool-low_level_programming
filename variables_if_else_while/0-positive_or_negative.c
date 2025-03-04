@@ -29,7 +29,7 @@ int main(void)
 		}
 		else
 		{
-		i	printf("is zero");
+			printf("is zero");
 		}
 	}
 	return (0);
