@@ -12,6 +12,8 @@ int main(void)
 	while (c < 58)
 	{
 		putchar(c);
+		if (c == 57)
+		break;
 		putchar(',');
 		putchar(' ');
 		c++;
