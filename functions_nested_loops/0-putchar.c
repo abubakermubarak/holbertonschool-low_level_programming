@@ -10,6 +10,7 @@ int main(void)
 {
 	char string[] = "_putchar\n";
 	int length  = sizeof(string);
-	write(1, string, length);
+
+	write(1, string, length - 1);
 	return (0);
 }
