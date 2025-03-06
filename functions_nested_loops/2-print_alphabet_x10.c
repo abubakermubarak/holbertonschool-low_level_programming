@@ -1,11 +1,11 @@
 #include "main.h"
 /**
- * print_alphabet - Print alphabet in lower
+ * print_alphabet_x10 - Print alphabet in lower
  * Description: Print the aplabet in lower X10
  *
  * Return : None
  */
-void print_alphabet(void)
+void print_alphabet_x10(void)
 {
 	int i = 0;
 
