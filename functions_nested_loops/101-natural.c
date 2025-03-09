@@ -9,9 +9,9 @@ int main(void)
 {
 	/* intaialize sum to zero */
 	int sum  = 0;
-
+	int i;
 	/* itrate throught numbers untill 1024 using loop */
-	for (int i = 0; i < 1024; i++)
+	for (i = 0; i < 1024; i++)
 	{
 		/* check if the number is devisible by 3 and 5 */
 		if (i % 3 == 0 || i % 5 == 0)
@@ -22,4 +22,5 @@ int main(void)
 	}
 		/* print the sum */
 		printf("%d\n", sum);
+		return (0);
 }
