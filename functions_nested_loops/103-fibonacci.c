@@ -22,7 +22,7 @@ int main(void)
 		old = prev;
 		prev = cur;
 		cur = old  + prev;
-		//printf("%d, ", cur);
+		/* printf("%d, ", cur); */
 	}
 	printf("%d\n", sum);
 	return (0);
