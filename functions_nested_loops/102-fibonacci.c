@@ -8,8 +8,8 @@
 int main(void)
 {
 	/* intialize variables */
-	long prev = 0;
-	long old = 1;
+	long prev = 1;
+	long old = 0;
 	long cur;
 	int i;
 	/* Itrate 50 times */
