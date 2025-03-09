@@ -13,12 +13,12 @@ int main(void)
 	long cur;
 	int i;
 	/* Itrate 50 times */
-	for (i = 0; i <= 50; i++)
+	for (i = 0; i < 50; i++)
 	{
 		/* fib num equals the summ of the previous two numbers */
 		cur = prev + old;
 		printf("%lu", cur);
-		if (i < 50)
+		if (i < 49)
 		{
 			printf(", ");
 		}
