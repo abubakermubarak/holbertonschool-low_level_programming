@@ -17,9 +17,9 @@ void print_rev(char *s)
 	}
 
 	/* loop in the oppsite direction */
-	for (; i >= 0; i--)
+	for (; i > 0; i--)
 	{
-		_putchar(*(s + i));
+		_putchar(*(s + i - 1));
 	}
 	_putchar('\n');
 }
