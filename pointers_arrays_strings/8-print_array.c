@@ -8,20 +8,23 @@
  */
 void print_array(int *a, int n)
 {
-	/* make counter */
-	int i = 0;
-
-	while (i < n)
+	if (n > 0)
 	{
-		if (i != n - 1)
+		/* make counter */
+		int i = 0;
+
+		while (i < n)
 		{
-			printf("%d, ", *a);
+			if (i != n - 1)
+			{
+				printf("%d, ", *a);
+			}
+			else
+			{
+				printf("%d\n", *a);
+			}
+			i++;
+			a++;
 		}
-		else
-		{
-			printf("%d\n", *a);
-		}
-		i++;
-		a++;
 	}
 }
