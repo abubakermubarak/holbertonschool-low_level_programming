@@ -11,8 +11,7 @@ char *_strncpy(char *dest, char *src, int n)
 {
 	if (*src == '\0' || n < 0)
 	{
-		*dest = '\0';
-		return (0);
+		return '\0';
 	}
 	*dest = *src;
 	*_strncpy(dest + 1, src + 1, n - 1);
