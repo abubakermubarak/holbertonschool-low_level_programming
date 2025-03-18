@@ -3,7 +3,7 @@
  * main - combination of two digits
  * Description: possible different combinations of two digits.
  *
- * Rerturn: 0 when success
+ * Return: 0 when success
  */
 int main(void)
 {
@@ -14,10 +14,9 @@ int main(void)
 		for (j = 0; j <= 9; j++)
 		{
 			if (j > i)
-			{	
+			{
 				putchar('0' + i);
 				putchar('0' + j);
-			
 				if (i < 8)
 				{
 					putchar(',');
