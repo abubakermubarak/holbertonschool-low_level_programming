@@ -15,7 +15,7 @@ void print_triangle(int size)
 	else
 	{
 		int i;
-
+	
 		/* print each row using loop */
 		for (i = 0; i < size; i++)
 		{
@@ -31,21 +31,20 @@ void print_triangle(int size)
  * Return: None
  */
 void print_row(int spaces, int bricks)
-	/* for each row print hashes and then a newline */
+/* for each row print hashes and then a newline */
 {
-	/* Print spaces before the bricks */
-	int i;
+    /* Print spaces before the bricks */
+    int i;
 
-	for (i = 0; i < spaces; i++)
-	{
-		_putchar(' ');
-	}
-	for (i = 0; i < bricks; i++)
-	{
-		/* print bricks */
-		_putchar('#');
-	}
-	/* Print newline */
-	_putchar('\n');
+    for (i = 0; i < spaces; i++)
+    {
+        _putchar(' ');
+    }
+    for (i = 0; i < bricks; i++)
+    {
+        /* print bricks */
+        _putchar('#');
+    }
+    /* Print newline */
+    _putchar('\n');
 }
-
