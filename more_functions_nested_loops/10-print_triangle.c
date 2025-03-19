@@ -1,0 +1,41 @@
+#include "main.h"
+void print_row(int spaces, int bricks);
+/**
+ * print_triangle - half pyramid
+ * Description - make half pyramid using putchar
+ * @size: the size of triangle
+ * Return: None
+ */
+void print_triangle(int size)
+{
+	int i;
+
+	/* print each row using loop */
+	for (i = 0; i < size; i++)
+	{
+		print_row(size - i - 1, i + 1);
+	}
+}
+/**
+ * print_row - print row of spaces and bricks
+ * Description: print row of number of sapces and bricsk then newline
+ * @spaces: space before bricks
+ * @brinks: nubmer of #
+ * Return: None
+ */
+void print_row(int spaces, int bricks)
+// for each row print hashes and then a newline
+{
+    // Print spaces before the bricks
+    for (int i = 0; i < spaces; i++)
+    {
+        _putchar(' ');
+    }
+    for (int i = 0; i < bricks; i++)
+    {
+        // print bricks
+        _putchar('#');
+    }
+    // Print newline
+    _putchar('\n');
+}
