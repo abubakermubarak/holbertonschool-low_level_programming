@@ -6,7 +6,7 @@
  *@n: Any integer
  * Return: None
  */
-void print_number(int n);
+void print_number(int n)
 {
 	/* if n negative print sign (-) first */
 	if (n < 0)
