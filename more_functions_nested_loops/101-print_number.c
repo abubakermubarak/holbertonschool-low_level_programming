@@ -8,19 +8,20 @@
  */
 void print_number(int n)
 {
+	int digit;
 	/* if n negative print sign (-) first */
 	if (n < 0)
 	{
 		_putchar('-');
+		n *= -1;
 	}
-	/* access digits from right */
-	int digit = n % 10;
-
-	n /= 10;
 	/* loop throught n by dividing it by 10 untill n is 0 */
+	digit = n % 10;
+	n /= 10;
 	if (n != 0)
 	{
 		print_number(n);
 	}
 	_putchar('0' + digit);
 }
+
