@@ -15,6 +15,7 @@ void print_number(int n);
 	}
 	/* access digits from right */
 	int digit = n % 10;
+
 	n /= 10;
 	/* loop throught n by dividing it by 10 untill n is 0 */
 	if (n != 0)
