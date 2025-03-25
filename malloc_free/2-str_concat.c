@@ -13,9 +13,13 @@ char *str_concat(char *s1, char *s2)
 {
 	int l1, l2, i, j;
 	char *string;
-
-	l1 = strlen(s1);
-	l2 = strlen(s2);
+	/* calculate two strings length */
+	for (l1 = 0; s1[l1] != '\0'; l1++)
+	{
+	}
+	for (l2 = 0; s2[l2] != '\0'; l2++)
+	{
+	}
 	if (l1 == 0)
 	{
 		return (s2);
@@ -24,7 +28,7 @@ char *str_concat(char *s1, char *s2)
 	{
 		return (s1);
 	}
-	string = malloc(l1 + l2);
+	string = malloc(l1 + l2 + 1);
 	if (string == NULL)
 	{
 		return (NULL);
