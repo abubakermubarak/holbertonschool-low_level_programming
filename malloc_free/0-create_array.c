@@ -1,59 +1,25 @@
 #include "main.h"
 #include <stdlib.h>
-#include <stdio.h>
+/**
+ * create_array - make array with certain value
+ * Description: creat array using malloc and ceratain value
+ * @size: array size
+ * @c: array value
+ * Return: poiner to array if success or Null otherwise
+ */
 
 char *create_array(unsigned int size, char c)
 {
-	int i;
+	int i, char *arr;
 
 	if (size == 0)
 	{
-		return NULL;
+		return (NULL);
 	}
-	char *arr = (char *)malloc(size);
+	arr = (char *)malloc(size);
 	for (i = 0; i < size; i++)
 	{
 		*(arr + i) = c;
 	}
 	return (arr);
-}
-void simple_print_buffer(char *buffer, unsigned int size)
-{
-    unsigned int i;
-
-    i = 0;
-    while (i < size)
-    {
-        if (i % 10)
-        {
-            printf(" ");
-        }
-        if (!(i % 10) && i)
-        {
-            printf("\n");
-        }
-        printf("0x%02x", buffer[i]);
-        i++;
-    }
-    printf("\n");
-}
-
-/**
- * main - check the code
- *
- * Return: Always 0.
- */
-int main(void)
-{
-    char *buffer;
-
-    buffer = create_array(98, 'H');
-    if  (buffer == NULL)
-    {
-        printf("failed to allocate memory\n");
-        return (1);
-    }
-    simple_print_buffer(buffer, 98);
-    free(buffer);
-    return (0);
 }
