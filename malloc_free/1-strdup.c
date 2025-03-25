@@ -21,7 +21,7 @@ char *_strdup(char *str)
 	{
 	}
 	/* allocate memory with str same size and length */
-	copy = malloc(i);
+	copy = malloc(i + 1);
 	/* if malloc failed and retrned NULL return null */
 	if (copy == NULL)
 	{
