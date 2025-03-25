@@ -20,11 +20,11 @@ char *str_concat(char *s1, char *s2)
 	for (l2 = 0; s2[l2] != '\0'; l2++)
 	{
 	}
-	if (l1 == 0)
+	if (s1 == NULL)
 	{
 		return (s2);
 	}
-	if (l2 == 0)
+	if (s2 == NULL)
 	{
 		return (s1);
 	}
