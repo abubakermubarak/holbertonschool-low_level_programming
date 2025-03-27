@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdlib.h>
 /**
  * alloc_grid - create Two dimintional array
  * Description: create two dimintional array using malloc
