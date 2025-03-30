@@ -9,7 +9,7 @@
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	int *arr;
+	char *arr;
 	unsigned int i;
 	/* if size or number of elemnt equls zer0 return NULL */
 	if (nmemb == 0 || size == 0)
