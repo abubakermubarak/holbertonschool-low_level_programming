@@ -9,8 +9,20 @@
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	char *arr;
+	int *arr;
+	int value;
 	unsigned int i;
+	/* check if the array is for chars or ints */
+	if (sizeof(size) == 4)
+	{
+		value = 0;
+	}
+	if (sizeof(size) == 1)
+	{
+		arr = (char *) arr;
+		value = (char) value;
+		value = '\0';
+	}
 	/* if size or number of elemnt equls zer0 return NULL */
 	if (nmemb == 0 || size == 0)
 	{
@@ -26,7 +38,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	/* set value for the array elemnts */
 	for (i = 0; i < nmemb; i++)
 	{
-		arr[i] = '0';
+		arr[i] = value;
 	}
 	return (arr);
 }
