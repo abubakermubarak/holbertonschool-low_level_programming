@@ -1,29 +1,29 @@
 #include "variadic_functions.h"
 #include <stdio.h>
 #include <stdarg.h>
-void print_int(va_list ap)
+void print_int(char* sep,va_list ap)
 {
-	printf("%i ", va_arg(ap, int));
-}
-void print_char(va_list ap)
+	printf("%s%i ",sep, va_arg(ap, int));
+}`
+void print_char(char* sep,va_list ap)
 {
-	printf("%c ", va_arg(ap, int));
-}
-void print_float(va_list ap)
+	printf("%s %c ",sep, va_arg(ap, int));
+}`
+void print_float(char* sep,va_list ap)
 {
-	printf("%f ", va_arg(ap, double));
-}
-void print_string(va_list ap)
+	printf("%s %f ",sep, va_arg(ap, double));
+}`
+void print_string(char* sep,va_list ap)
 {
 	char *s;
-
+`
 	s = va_arg(ap,char *);
 	if (s == NULL)
 	{
-		printf("(nil)");
+		printf("%s%s ",sep," (nil)");
 		return;
 	}
-	printf("%s ", s);
+	printf("%s%s ",sep, s);
 	
 }
 void print_all(const char * const format, ...)
@@ -41,7 +41,7 @@ void print_all(const char * const format, ...)
 	void (*ptr) (va_list);
 	
 	va_start(ap, 0);
-	
+	char* sep=',';
 	while (format[counter])
 	{
 		
@@ -51,7 +51,7 @@ void print_all(const char * const format, ...)
 			if(list[i].identifier == format[counter])
 			{
 				ptr=list[i].f;
-				ptr(ap);
+				ptr(sep,ap);
 			}
 			i++;
 		}
