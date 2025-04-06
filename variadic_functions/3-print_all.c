@@ -42,7 +42,7 @@ void print_all(const char * const format, ...)
 	void (*ptr) (char *,va_list);
 	
 	va_start(ap, 0);
-	while (format[counter] && format[counter] != NULL)
+	while (format[counter] && format!=NULL)
 	{
 		
 		i = 0; 
