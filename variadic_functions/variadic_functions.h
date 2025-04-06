@@ -1,4 +1,5 @@
 #include <stdarg.h>
+#include <stddef.h>
 #ifndef VARIADIC_FUNCTIONS_
 #define VARIADIC_FUNCTIONS_
 typedef struct format_types
