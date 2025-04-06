@@ -3,27 +3,27 @@
 #include <stdarg.h>
 void print_int(char* sep,va_list ap)
 {
-	printf("%s%i ",sep, va_arg(ap, int));
-}`
+	printf("%s%i",sep, va_arg(ap, int));
+}
 void print_char(char* sep,va_list ap)
 {
-	printf("%s %c ",sep, va_arg(ap, int));
-}`
+	printf("%s %c",sep, va_arg(ap, int));
+}
 void print_float(char* sep,va_list ap)
 {
-	printf("%s %f ",sep, va_arg(ap, double));
-}`
+	printf("%s %f",sep, va_arg(ap, double));
+}
 void print_string(char* sep,va_list ap)
 {
 	char *s;
-`
+
 	s = va_arg(ap,char *);
 	if (s == NULL)
 	{
-		printf("%s%s ",sep," (nil)");
+		printf("%s%s",sep,"(nil)");
 		return;
 	}
-	printf("%s%s ",sep, s);
+	printf("%s%s",sep, s);
 	
 }
 void print_all(const char * const format, ...)
@@ -37,11 +37,11 @@ void print_all(const char * const format, ...)
 	};
 	int counter;
 	int i;
+	char *sep="";
 	
-	void (*ptr) (va_list);
+	void (*ptr) (char *,va_list);
 	
 	va_start(ap, 0);
-	char* sep=',';
 	while (format[counter])
 	{
 		
@@ -52,6 +52,7 @@ void print_all(const char * const format, ...)
 			{
 				ptr=list[i].f;
 				ptr(sep,ap);
+				sep=", ";
 			}
 			i++;
 		}
