@@ -17,19 +17,19 @@ void print_all(const char * const format, ...)
 			case 'i':
 			{
 				i = va_arg(ap, int);
-				printf("%i", i);
+				printf("%i ", i);
 				break;
 			}
 			case 'c':
 			{
 				c = va_arg(ap, int);
-				printf("%c", c);
+				printf("%c ", c);
 				break;
 			}
 			case 'f':
 			{
 				f = va_arg(ap, double);
-				printf("%f", f);
+				printf("%f ", f);
 				break;
 			}
 			case 's':
@@ -37,11 +37,11 @@ void print_all(const char * const format, ...)
 				s = va_arg(ap, char *);
 				if (s == NULL)
 				{
-					printf("(nil)");
+					printf("(nil) ");
 				}
 				else
 				{
-					printf("%s", s);
+					printf("%s ", s);
 				}
 				break;
 			}
