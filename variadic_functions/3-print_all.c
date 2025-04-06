@@ -7,11 +7,11 @@ void print_int(char* sep,va_list ap)
 }
 void print_char(char* sep,va_list ap)
 {
-	printf("%s %c",sep, va_arg(ap, int));
+	printf("%s%c",sep, va_arg(ap, int));
 }
 void print_float(char* sep,va_list ap)
 {
-	printf("%s %f",sep, va_arg(ap, double));
+	printf("%s%f",sep, va_arg(ap, double));
 }
 void print_string(char* sep,va_list ap)
 {
