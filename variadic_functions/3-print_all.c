@@ -42,7 +42,7 @@ void print_all(const char * const format, ...)
 	void (*ptr) (char *,va_list);
 	
 	va_start(ap, 0);
-	while (format[counter] && format!=NULL)
+	while (format!=NULL && format[counter])
 	{
 		
 		i = 0; 
@@ -59,4 +59,5 @@ void print_all(const char * const format, ...)
 		counter++;
 	}
 	printf("\n");
+	va_end(ap);
 }
