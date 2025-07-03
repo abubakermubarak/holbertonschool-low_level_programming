@@ -34,10 +34,6 @@ char *cap_string(char *string)
 		/* Check if the character is seprator*/
 		if (is_seprator(string[i]) == 1)
 		{
-			if (string[i] == '\t')
-			{
-				string[i] = ' ';
-			}
 			i++;
 			if (string[i] >= 'a' && string[i] <= 'z')
 			{
