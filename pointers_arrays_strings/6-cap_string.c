@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 /**
  * is_seprator - check for seprator
  * Description: checks for speical chars
@@ -8,9 +9,9 @@
 int is_seprator(char c)
 {
 	int i;
-	char sep[14] = {'\t', '\n', ',', ';', '.', '!', '?', '\"', '(', ')', '{', '}'};
+	char sep[] = {'\t', '\n', ',', ';', '.', '!', '?', '\"', '(', ')', '{', '}', ' '};
 
-	for (i = 0; i < 14; i++)
+	for (i = 0; sep[i] != '\0'; i++)
 	{
 		if (c == sep[i])
 		{
@@ -34,13 +35,21 @@ char *cap_string(char *string)
 		/* Check if the character is seprator*/
 		if (is_seprator(string[i]) == 1)
 		{
-			i++;
-			if (string[i] >= 'a' && string[i] <= 'z')
+			if (string[i + 1] >= 'a' && string[i + 1] <= 'z')
 			{
-				string[i] = string[i] - 32;
+				string[i + 1] = string[i + 1] - 32;
 			}
 		}
 	}
 	return (string);
 }
+int main(void)
+{
+    char str[] = "Expect the best. Prepare for the worst. Capitalize on what comes.\nhello world! hello-world 0123456hello world\thello world.hello world\n";
+    char *ptr;
 
+    ptr = cap_string(str);
+    printf("%s", ptr);
+    printf("%s", str);
+    return (0);
+}
