@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 /**
  * is_seprator - check for seprator
  * Description: checks for speical chars
@@ -9,9 +8,9 @@
 int is_seprator(char c)
 {
 	int i;
-	char sep[] = {'\t', '\n', ',', ';', '.', '!', '?', '\"', '(', ')', '{', '}', ' '};
+	char *sep = "\t\n,;.!?\"(){} ";
 
-	for (i = 0; sep[i] != '\0'; i++)
+	for (i = 0; i < 14; i++)
 	{
 		if (c == sep[i])
 		{
@@ -39,6 +38,10 @@ char *cap_string(char *string)
 			{
 				string[i + 1] = string[i + 1] - 32;
 			}
+		}
+		if (string[i] >= 'a' && string[i] <= 'z' && i == 0)
+		{
+			string[i] = string[i] - 32;
 		}
 	}
 	return (string);
