@@ -15,16 +15,13 @@ char *leet(char *s)
 	int cipher[] = {4, 3, 0, 7, 1};
 
 	c = 0;
-	while (s[c])
+	while ((s[c] >= 'a' && s[c] <= 'z') || (s[c] >= 'A' && s[c] <= 'Z'))
 	{
-		if ((s[c] >= 'a' && s[c] <= 'z') || (s[c] >= 'A' && s[c] <= 'Z'))
+		for (i = 0; letters[i] != '\0'; i++)
 		{
-			for (i = 0; letters[i] != '\0'; i++)
+			if ((s[c] == letters[i]) || (s[c] - 32 == letters[i]))
 			{
-				if ((s[c] == letters[i]) || (s[c] - 32 == letters[i]))
-				{
-					s[c] =  '0' + cipher[i];
-				}
+				s[c] =  '0' + cipher[i];
 			}
 		}
 		c++;
