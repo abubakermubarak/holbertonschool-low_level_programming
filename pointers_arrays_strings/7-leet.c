@@ -21,9 +21,9 @@ char *leet(char *s)
 		{
 			for (i = 0; letters[i] != '\0'; i++)
 			{
-				if ((string[c] == letters[i]) || (string[c] - 32 == letters[i]))
+				if ((s[c] == letters[i]) || (s[c] - 32 == letters[i]))
 				{
-					string[c] =  '0' + cipher[i];
+					s[c] =  '0' + cipher[i];
 				}
 			}
 		}
