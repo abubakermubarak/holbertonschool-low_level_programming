@@ -15,7 +15,7 @@ char *leet(char *s)
 	int cipher[] = {4, 3, 0, 7, 1};
 
 	c = 0;
-	while ((s[c] >= 'a' && s[c] <= 'z') || (s[c] >= 'A' && s[c] <= 'Z'))
+	while (s[c])
 	{
 		for (i = 0; letters[i] != '\0'; i++)
 		{
