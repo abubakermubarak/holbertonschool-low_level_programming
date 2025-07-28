@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stddef.h>
 /**
  * _strchr -  locates a character in a string
  * Description: return pointer to first ocuurence of char in string
