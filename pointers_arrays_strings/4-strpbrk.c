@@ -16,6 +16,12 @@ char *_strpbrk(char *s, char *accept)
 	{
 		return (NULL);
 	}
+	/* if any string is empty */
+	if (s[0] == '\0' || accept[0] == '\0')
+	{
+		return (NULL);
+	}
+	/*loop throught the two strings */
 	while (*s != '\0')
 	{
 		i = 0;
