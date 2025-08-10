@@ -13,3 +13,23 @@ char *_strpbrk(char *s, char *accept)
 	{
 		return (NULL);
 	}
+	while (*s != '\0')
+	{
+		while (*accept != '\0')
+		{
+			if (*accept == *s)
+			{
+				return (s);
+			}
+			accept++;
+		}
+		s++;
+	}
+	if (*accept == '\0')
+	{
+		s++;
+		return (s);
+	}
+	/* if no match found return NULL */
+	return (NULL);
+}	
